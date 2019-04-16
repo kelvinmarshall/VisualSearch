@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Auth.SignInFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:backgroundTint="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_margin"
+        app:cardCornerRadius="16dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:id="@+id/activity_login"
+            tools:context=".auth.Login">
+            <TextView
+                android:id="@+id/label"
+                android:text="Please sign in"
+                android:layout_margin="@dimen/activity_margin"
+                style="@style/TextAppearance.Toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:layout_marginStart="@dimen/activity_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                app:errorEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColor="@color/textColorPrimary"
+                android:textColorHint="@color/textColorPrimary"
+                app:boxStrokeColor="@color/textColorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/textInputpassword"
+                app:layout_constraintTop_toBottomOf="@id/label">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:drawableStart="@drawable/ic_mail"
+                    android:drawablePadding="4dp"
+                    android:id="@+id/input_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                app:errorEnabled="true"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:textColor="@color/textColorPrimary"
+                app:boxStrokeColor="@color/textColorPrimary"
+                android:textColorHint="@color/textColorPrimary"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleDrawable="@drawable/toggle_on"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/btn_reset_password"
+                app:layout_constraintTop_toBottomOf="@+id/textInputemail">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:drawableStart="@drawable/ic_password"
+                    android:drawablePadding="4dp"
+                    android:id="@+id/input_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/hint_password"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:id="@+id/btn_reset_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_marginStart="@dimen/activity_margin"
+                android:text="@string/btn_forgot_password"
+                android:textAllCaps="false"
+                android:textColor="@color/textColorPrimary"
+                app:layout_constraintBottom_toTopOf="@id/sign_up_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputpassword" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sign_up_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:textAlignment="center"
+                android:text="@string/btn_link_to_register"
+                android:textAllCaps="false"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@id/sign_in_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_reset_password" />
+
+            <androidx.core.widget.ContentLoadingProgressBar
+                android:id="@+id/wait"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="@dimen/activity_margin"
+                android:layout_marginEnd="@dimen/activity_margin"
+                android:layout_marginBottom="@dimen/activity_margin"
+                android:text="@string/btn_login"
+                app:backgroundTint="@color/colorPrimaryDark"
+                android:textColor="@color/textColorPrimary"
+                android:textStyle="bold"
+                app:cornerRadius="4dp"
+                app:rippleColor="@android:color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sign_up_button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</FrameLayout>

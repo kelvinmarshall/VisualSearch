@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_marginTop="@dimen/activity_margin"
+    android:layout_marginEnd="@dimen/activity_margin"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/remove_cart_item"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_margin"
+        android:src="@drawable/remove_item"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/img_product"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_product"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginBottom="@dimen/activity_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/remove_cart_item"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KES 200"
+        android:textColor="@color/textColorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/product_title"
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:layout_marginTop="4dp"
+        android:text="Product_Tittle"
+        android:textColor="@color/textColorPrimary"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/view"
+        app:layout_constraintEnd_toEndOf="@+id/price"
+        app:layout_constraintStart_toEndOf="@+id/img_product"
+        app:layout_constraintTop_toBottomOf="@+id/price" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/product_title"
+        app:layout_constraintStart_toEndOf="@+id/img_product" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_margin"
+        android:text="QTY :"
+        android:layout_marginBottom="@dimen/activity_margin"
+        android:textColor="@color/textColorPrimary"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_product" />
+
+    <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+        android:id="@+id/quantity_no"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        app:initialNumber="1"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        android:layout_marginBottom="@dimen/activity_margin"
+        app:textColor="@color/textColorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/quantity"
+         />
+    <View
+        android:background="@android:color/darker_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.florent37:expansionpanel:1.2.2@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/expansionpanel-1.2.2.aar/01bdb52b0a6a29b31265f9448cbb1997/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/expansionpanel-1.2.2.aar/01bdb52b0a6a29b31265f9448cbb1997/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.florent37/expansionpanel/1.2.2/2ab668f81b6ed4fb0ced3f7f049e0f6d2689893f/expansionpanel-1.2.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/wishlistFragment"
+        style="@style/Widget.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wishlist_label" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/myorderFragment"
+        style="@style/Widget.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/myorder_label" />
+    <View
+        android:layout_width="50dp"
+        android:layout_height="2dp"
+        android:background="@color/textColorPrimary"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/accountFragment"
+        style="@style/Widget.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account_label" />
+
+</merge>
