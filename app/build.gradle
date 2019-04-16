@@ -27,8 +27,8 @@ android {
     buildTypes.each {
 
         // CONSUMER_KEY & CONSUMER_SECRET Build Variables are referenced from gradle.properties file
-        it.buildConfigField "String", "CONSUMER_KEY", '"4vunQP3XqF24Frnumdi544kHo66m6GW3"'
-        it.buildConfigField "String", "CONSUMER_SECRET", '"4OcdFCGGvh0vGuqo"'
+        it.buildConfigField "String", "CONSUMER_KEY", '"Daraja consumer key"'
+        it.buildConfigField "String", "CONSUMER_SECRET", '"Daraja secret key"'
     }
 
 }
