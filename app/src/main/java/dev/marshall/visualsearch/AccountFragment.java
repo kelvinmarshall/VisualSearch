@@ -80,6 +80,7 @@ public class AccountFragment extends Fragment {
         return view;
     }
 
+/** 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -149,6 +150,7 @@ public class AccountFragment extends Fragment {
         );
 
     }
+    */
 
     private void setvalues() {
         Users.child(user.getUid()).addValueEventListener(new ValueEventListener() {
